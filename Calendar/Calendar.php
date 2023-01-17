@@ -138,10 +138,14 @@ class CalendarPlugin extends MantisPlugin {
         $this->description = plugin_lang_get( 'description' );
         $this->page        = 'config_page';
 
-        $this->version = '2.6.1';
+        // $this->version = '2.6.1';
+        $this->version = '2.6.2';
+
 
         $this->requires = array(
-                                  'MantisCore' => '2.14.0',
+                                //   'MantisCore' => '2.14.0',
+                                'MantisCore' => '2.25.2',
+
         );
 
         $this->author  = 'Grigoriy Ermolaev';

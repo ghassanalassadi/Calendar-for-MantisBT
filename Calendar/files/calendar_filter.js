@@ -19,5 +19,4 @@ $(document).ready(function () {
     $('[name=for_user]').change(function () {
         $(this).parent().submit();
     });
-
 });

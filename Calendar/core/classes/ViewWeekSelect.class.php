@@ -93,6 +93,7 @@ class ViewWeekSelect extends ViewWeekCalendar {
         echo '<input type="hidden" name="id" value="' . $this->bug_id . '" />';
 
         echo '<label class="inline">' . plugin_lang_get( 'filter_text' ) . '</label>';
+        echo '<label class="inline">"This is a test"</label>';
         echo '<select name="for_user">';
         echo '<option value="' . auth_get_current_user_id() . '">[' . lang_get( 'reset_query' ) . ']</option>';
         if( $this->for_user == 0 ) {

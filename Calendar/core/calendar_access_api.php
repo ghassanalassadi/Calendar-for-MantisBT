@@ -55,6 +55,8 @@ function access_has_event_level( $p_access_level, $p_event_id, $p_user_id = null
 	}
 
 	$t_project_id = event_get_field( $p_event_id, 'project_id' );
+	$t_author_id = event_get_field($p_event_id, 'author_id');
+	$t_member_list = event_get_field($p_event_id, 'user_ids');
 	$t_event_is_user_reporter = event_is_user_reporter( $p_event_id, $p_user_id );
 	$t_access_level = access_get_project_level( $t_project_id, $p_user_id );
 

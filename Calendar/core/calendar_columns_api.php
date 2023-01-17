@@ -224,7 +224,7 @@ function print_column_this_day( $p_day_events, $p_total_number_of_days = 0, $p_f
                     $t_time_start  = date( "H:i", event_get_field( $t_current_event_id, "date_from" ) );
                     $t_time_finish = date( "H:i", event_get_field( $t_current_event_id, "date_from" ) + event_get_field( $t_current_event_id, "duration" ) );
                     echo $t_time_start . " - " . $t_time_finish;
-
+                    echo "</br>";
 
                     echo "</a>";
                 }
