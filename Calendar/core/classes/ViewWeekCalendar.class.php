@@ -13,6 +13,7 @@
 class ViewWeekCalendar extends WeekCalendar {
     protected $week;
     protected $for_user;
+    protected $for_access_level;
     protected $year;
 
     //put your code here
@@ -101,7 +102,14 @@ class ViewWeekCalendar extends WeekCalendar {
         echo '<input type="hidden" name="year" value="' . $this->year . '" />';
         echo '<input type="hidden" name="full_time" value="' . (int)self::$full_time_is . '" />';
 
+
         echo '<label class="inline">' . plugin_lang_get( 'filter_text' ) . '</label>';
+        // $g_access_levels = MantisEnum::getAssocArrayIndexedByValues( config_get( 'access_levels_enum_string' ) );
+        // echo '<select id="for_user_role" name="for_user_role">';
+        // echo '<option value="0">[' . plugin_lang_get('filter_role_default') . ']</option>';
+        // for( $i = 1; $i <= count($g_access_levels); $i++ ) {
+        //     echo '<option value="'. $i. '">' . MantisEnum::getLabel( lang_get( 'access_levels_enum_string' ), $g_access_levels ) . '</option>';
+        // }
         echo '<select name="for_user">';
         echo '<option value="' . auth_get_current_user_id() . '">[' . lang_get( 'reset_query' ) . ']</option>';
         if( $this->for_user == 0 ) {
